@@ -24,7 +24,8 @@ export class TopicRepository {
     return 'Topic added.';
   }
 
-  async remove(id: number): Promise<void> {
-    await this.topicsRepository.delete(id);
+  async remove(id: number): Promise<string> {
+    await this.topicsRepository.softDelete(id);
+    return 'Topic deleted.';
   }
 }

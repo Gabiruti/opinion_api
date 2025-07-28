@@ -1,6 +1,7 @@
 import {
   Column,
   CreateDateColumn,
+  DeleteDateColumn,
   Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -25,4 +26,7 @@ export class Topic {
 
   @UpdateDateColumn({ nullable: true, default: null })
   updated_at?: Date;
+
+  @DeleteDateColumn({ nullable: true, default: null })
+  deleted_at?: Date;
 }
